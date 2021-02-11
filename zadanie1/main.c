@@ -39,3 +39,17 @@ int main(int argc, char *argv[])
             i++;
             continue;
         }
+        if(i == 7)
+        {
+            // bit shifting - for manual placing proper bits in each field
+            temp.id = (uint8_t)(
+                ch[0] << 3\
+                | ch[1] << 2\
+                | ch[2] << 1\
+                | ch[3]);
+            temp.message = (uint8_t)(
+                ch[4] << 2\
+                | ch[5] << 1\
+                | ch[6]);
+            temp.ctrl = (uint8_t)ch[7];
+
