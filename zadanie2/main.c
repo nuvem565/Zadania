@@ -39,3 +39,5 @@ int main()
             exit(0);
         }
 
+    // clears buffer in case of more than one char inputed resulting in redundant loop iterations
+    fflush(stdin);
