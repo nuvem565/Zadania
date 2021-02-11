@@ -21,3 +21,11 @@ type Sensor(unitName:string, resolution:float, upper:float, lower:float, ?name:s
     
 
 
+(*Implementuje klasę pochodną *)
+type TemperatureSensor(unitName, resolution, upper, lower, name, description, delay:float) =
+    inherit Sensor(unitName, resolution, upper, lower, name, description) 
+
+    // stała czasowa samego czujnika (w oderwaniu od obiektu), czyli szybkość reakcji na zmianę wartości
+    member ts.TimeDelay = delay
+
+
