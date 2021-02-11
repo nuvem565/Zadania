@@ -24,3 +24,8 @@ int main(int argc, char *argv[])
 
     // prepare temporal object for storing it and use in the loop
     obj temp = {0,0,0};
+    // a loop reads from the file, then every 8 bits assigns them to the
+    // fields of the temporal object. i = [0,7], number of bytes: bytesCount = [0, +]
+    int i = 0, bytesCount = 0;
+    while( (ch[i] = getc(input)) != EOF )
+    {
