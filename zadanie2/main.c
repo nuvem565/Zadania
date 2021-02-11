@@ -47,3 +47,10 @@ int main()
 }
 
 
+void decimalToBinary(uint32_t decimal, char * outBuff)
+{
+    if(decimal == 0)
+    {
+        outBuff[0] = '0'; outBuff[1] = '\0';
+        return ;
+    }
