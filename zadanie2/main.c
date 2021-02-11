@@ -59,3 +59,14 @@ void decimalToBinary(uint32_t decimal, char * outBuff)
     // can be easy achieved using itoa function but more general code is following:
     char binBuff[33];
     int i, j;
+    for(i = 0; decimal > 0; i++)
+    {
+        // get bits from the bottom to the top of input number
+        binBuff[i] = decimal % 2 ? '1' : '0';
+        decimal >>= 1;
+    }
+    // puts bits in reverse order
+    for(j = 0; i > 0; i--, j++)
+        outBuff[j] = binBuff[i-1];
+    outBuff[j] = '\0';
+}
