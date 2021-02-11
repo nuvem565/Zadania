@@ -29,3 +29,9 @@ type TemperatureSensor(unitName, resolution, upper, lower, name, description, de
     member ts.TimeDelay = delay
 
 
+
+type Accelerometer(unitName, resolution, upper, lower, name, description, supply) =
+    inherit Sensor(unitName, resolution, upper, lower, name, description)
+
+    // napięcie zasilania
+    member a.SupplyVoltage = supply
