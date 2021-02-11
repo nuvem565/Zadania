@@ -66,3 +66,10 @@ int main(int argc, char *argv[])
         i++;
     }
     fclose(input);
+
+    // i is again main iterator, j stores information about table length
+    i = 0;
+    int errorsCount = 0;
+    char outputData[1000] = "";
+    char buffer[21] = "";
+
