@@ -70,3 +70,18 @@ void decimalToBinary(uint32_t decimal, char * outBuff)
         outBuff[j] = binBuff[i-1];
     outBuff[j] = '\0';
 }
+
+int binaryToDecimal(char * binary)
+{
+    // i - index of the imaginary register, from less significant bit
+    int length, i = 0, decimal = 0;
+    // calculates length of the binary input to sum up from less significant bit
+    for(length = 0; binary[length] == '1' || binary[length] == '0'; length++)
+        ;
+
+    for(length--; length >= 0; length--, i++)
+        decimal += (binary[length] == '1') ? (1 << i) : 0;
+
+    return decimal;
+}
+
