@@ -21,3 +21,10 @@ int main()
         decision = getc(stdin);
 
 
+        if(decision == 'b')
+        {
+            printf("Input decimal number:\n");
+            scanf("%i", &number);
+            decimalToBinary(number, outBuff);
+            printf("%s\n", outBuff);
+        }
