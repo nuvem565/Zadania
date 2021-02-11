@@ -34,3 +34,8 @@ int main()
             scanf("%s", charBuff);
             printf("\nThe integer in decimal format:\n%i\n\n", binaryToDecimal(charBuff));
         }
+        else if(decision == 'e')
+        {
+            exit(0);
+        }
+
