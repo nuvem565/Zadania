@@ -97,3 +97,8 @@ int main(int argc, char *argv[])
         i++;
     }
 
+    // number of objects is already calculated
+    printf( "\nNumber of data objects: %i\n\n", bytesCount);
+    printf( "\nNumber of incorrect objects: %i\n\n", errorsCount);
+    printf( "\nCorrect output: %s\n\n", outputData);
+
