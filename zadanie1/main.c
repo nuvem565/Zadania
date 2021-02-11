@@ -80,3 +80,20 @@ int main(int argc, char *argv[])
             // message/control bit error increases number of flawed objects
             errorsCount++;
         }
+        else
+        {
+            // data object if correct - calculates third line
+            // all correct objects from "input.txt" are set to appropriate bit shift
+            // resulting in one output byte
+            uint8_t outByte = 0;
+            outByte |= storage[i].id << 4;
+            outByte |= storage[i].message << 1;
+            outByte |= storage[i].ctrl;
+
+            //printf("%i\n",outByte); //debug only
+            itoa(outByte, buffer, 2);
+            strcat(outputData, buffer);
+        }
+        i++;
+    }
+
