@@ -53,3 +53,15 @@ int main(int argc, char *argv[])
                 | ch[6]);
             temp.ctrl = (uint8_t)ch[7];
 
+            storage[bytesCount] = temp;
+            /* debug only
+            if( temp.message == 0 || temp.ctrl != (temp.id % 2) )
+                printf( "Incorrect! %i, %i, %i \n", temp.id, temp.message, temp.ctrl);
+            else
+                printf( "Correct data: %i, %i, %i\n", temp.id, temp.message, temp.ctrl);
+            */
+            i = 0;
+            bytesCount++;
+        }
+        i++;
+    }
