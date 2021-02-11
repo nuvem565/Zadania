@@ -73,3 +73,10 @@ int main(int argc, char *argv[])
     char outputData[1000] = "";
     char buffer[21] = "";
 
+    while( i < bytesCount )
+    {
+        if( storage[i].message == 0 || storage[i].ctrl != storage[i].id % 2 )
+        {
+            // message/control bit error increases number of flawed objects
+            errorsCount++;
+        }
