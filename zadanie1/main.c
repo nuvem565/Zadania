@@ -13,3 +13,9 @@ typedef struct
 
 obj storage[1000];
 
+
+int main(int argc, char *argv[])
+{
+    printf("\n");
+    // file pointer for input.txt, which takes first argument passed to main or simply input text file
+    FILE* input = fopen( (argc == 2 ? argv[1] : "input.txt") , "r");
