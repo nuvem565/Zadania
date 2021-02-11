@@ -35,3 +35,15 @@ type Accelerometer(unitName, resolution, upper, lower, name, description, supply
 
     // napięcie zasilania
     member a.SupplyVoltage = supply
+
+[<EntryPoint>]
+let main argv =
+    printfn "Witaj w trybie konsoli programu pokładowego.\nPodaj zadany czas odświeżania [ms]:\n" 
+    // Jeśli nie wywołano z konsoli razem z argumentami, zapytaj użytkownika o okres odświeżania [ms]
+    let timerInterval =
+        match Array.toList argv with
+        | [] -> 
+            let input = System.Console.ReadLine() |> int
+            if 1000 > input then 1000. else float input
+        | consoleInput :: _ -> if 1000 > int(consoleInput) then 1000. else float(consoleInput)
+    
