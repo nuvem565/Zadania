@@ -54,3 +54,5 @@ void decimalToBinary(uint32_t decimal, char * outBuff)
         outBuff[0] = '0'; outBuff[1] = '\0';
         return ;
     }
+    else if(decimal < 0)
+        decimal = -decimal;
