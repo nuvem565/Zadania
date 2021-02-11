@@ -29,3 +29,13 @@ int main(int argc, char *argv[])
     int i = 0, bytesCount = 0;
     while( (ch[i] = getc(input)) != EOF )
     {
+        // saves each char 48 as 0, and 49 as 1 and skips all other characters
+        if(ch[i] == '1' || ch[i] == '0')
+        {
+            ch[i] -= '0';
+        }
+        else
+        {
+            i++;
+            continue;
+        }
