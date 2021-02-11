@@ -22,3 +22,5 @@ int main(int argc, char *argv[])
     //char array for every 8 bits of the input data
     char ch[8];
 
+    // prepare temporal object for storing it and use in the loop
+    obj temp = {0,0,0};
