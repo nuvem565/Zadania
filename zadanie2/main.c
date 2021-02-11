@@ -26,7 +26,7 @@ int main()
             printf("Input decimal number:\n");
             scanf("%i", &number);
             decimalToBinary(number, outBuff);
-            printf("%s\n", outBuff);
+            printf("\nThe integer in binary format:\n%s\n\n", outBuff);
         }
         else if(decision == 'd')
         {
