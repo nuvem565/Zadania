@@ -47,3 +47,14 @@ let main argv =
             if 1000 > input then 1000. else float input
         | consoleInput :: _ -> if 1000 > int(consoleInput) then 1000. else float(consoleInput)
     
+    // Funcja odświeża logi w konsoli - wywoływana na wystąpienie zdarzenia 
+    let eventRoutine _ = printfn "Zdarzenie %A" System.DateTime.Now
+    // Ustawienie timera, który wywołuje zdarzenie wyświetlenia logów co określony interwał
+    let refresher = new System.Timers.Timer(float timerInterval)
+    // Konfiguracja z automatycznym resetem po zdarzeniu.
+    refresher.AutoReset <- true
+    // Dodaje funkcję wywoływaną podczas zdarzenia. Wystartowanie timera
+    refresher.Elapsed.Add eventRoutine
+    refresher.Start()
+    //refresher.Stop()
+
