@@ -56,3 +56,6 @@ void decimalToBinary(uint32_t decimal, char * outBuff)
     }
     else if(decimal < 0)
         decimal = -decimal;
+    // can be easy achieved using itoa function but more general code is following:
+    char binBuff[33];
+    int i, j;
