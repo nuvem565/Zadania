@@ -102,3 +102,11 @@ int main(int argc, char *argv[])
     printf( "\nNumber of incorrect objects: %i\n\n", errorsCount);
     printf( "\nCorrect output: %s\n\n", outputData);
 
+    FILE* output = fopen("output", "w");
+    fprintf( output, "%d\n%d\n%s", bytesCount, errorsCount, outputData);
+    fclose(output);
+
+    return 0;
+}
+
+
