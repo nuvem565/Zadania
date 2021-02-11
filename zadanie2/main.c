@@ -14,3 +14,10 @@ int main()
     char charBuff[33], outBuff[33];
 
 
+    do
+    {
+        printf("Choose whether you want to convert to binary or to decimal.\
+\nPress b, d or e for exit:\n");
+        decision = getc(stdin);
+
+
