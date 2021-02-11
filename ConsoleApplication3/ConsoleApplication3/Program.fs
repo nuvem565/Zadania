@@ -64,3 +64,7 @@ let main argv =
     let temp2 = new TemperatureSensor( "K", 0.001, 450., 250., "Auto Gauge 1/8 NPT", "czujnik temperatury oleju", 100.)
     let accel1 = new Accelerometer( "g", 0.001, -16., 16., "MMA8653FCR1", "czujnik przyspieszenia dla ESP", 3.3)
 
+
+    System.Console.ReadKey() |> ignore
+    
+    0 // return an integer exit code
